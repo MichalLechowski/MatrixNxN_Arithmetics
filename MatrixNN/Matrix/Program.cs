@@ -10,7 +10,43 @@ namespace Matrix
     {
         static void Main(string[] args)
         {
+            int[,] testTab = new int[,]
+            {
+                {100 , 2   , 3   , 4   , 100},
+                {3   , 100 , 5   , 100 , 7  },
+                {4   , 6   , 100 , 8   , 6  },
+                {5   , 100 , 7   , 100 , 5  },
+                {100 , 6   , 5   , 4   , 100}
+            };
 
+            int[,] testTab2 = new int[,]
+          {
+                {1 , 1   , 100 },
+                {1   , 100 , 2 },
+                {100   , 2   , 2},
+
+          };
+
+            //int[,] output = MatrixAlgorithmOptimize.SumTrianglesValues(testTab);
+
+            //for (int i = 0; i < output.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < output.GetLength(1); j++)
+            //    {
+            //        Console.WriteLine(output[i, j]);
+            //    }
+            //}
+
+            int[,] output = MatrixAlgorithmFinalOptimization.SumTrianglesValues(testTab);
+
+            for (int i = 0; i < output.GetLength(0); i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < output.GetLength(1); j++)
+                {
+                    Console.WriteLine(output[j, i]);
+                }
+            }
         }
 
     }

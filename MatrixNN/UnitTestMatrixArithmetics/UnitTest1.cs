@@ -8,18 +8,17 @@ namespace UnitTestMatrixArithmetics
     public class UnitTest1
     {
 
-
         [TestMethod]
-        public void Add_OK()
+        public void SumTrianglesValues_OK()
         {
             //arrange
             int[,] testTab1 = new int[,]
             {
-                {0, 2, 2, 2, 4},
-                {1, 1, 2, 3, 3},
-                {1, 1, 2, 3, 3},
-                {1, 3, 5, 3, 3},
-                {4, 5, 5, 5, 4}
+                {0, 1, 2, 3, 4},
+                {1, 1, 2, 3, 4},
+                {2, 2, 2, 3, 4},
+                {3, 3, 3, 3, 4},
+                {4, 4, 4, 4, 4}
             };
 
             int[,] testTab2 = new int[,]
@@ -37,14 +36,14 @@ namespace UnitTestMatrixArithmetics
                 {2, 2, 3},
             };
 
-            int[,] expectedOutput1 = new int[,] { { 8, 20 }, { 12, 4 } };
+            int[,] expectedOutput1 = new int[,] { { 8, 15 }, { 15, 8 } };
             int[,] expectedOutput2 = new int[,] { { 3, 6 }, { 6, 3 } };
-            int[,] expectedOutput3 = new int[,] { { 2, 2 }, { 3, 1 } };
+            int[,] expectedOutput3 = new int[,] { { 2, 3}, { 2, 1 } };
 
             //act
-            int[,] temp1 = MatrixArithmetics.Add(testTab1);
-            int[,] temp2 = MatrixArithmetics.Add(testTab2);
-            int[,] temp3 = MatrixArithmetics.Add(testTab3);
+            int[,] temp1 = MatrixAlgorithmFinalOptimization.SumTrianglesValues(testTab1);
+            int[,] temp2 = MatrixAlgorithmFinalOptimization.SumTrianglesValues(testTab2);
+            int[,] temp3 = MatrixAlgorithmFinalOptimization.SumTrianglesValues(testTab3);
 
             //assert
             Assert.AreEqual(expectedOutput1[0,0], temp1[0,0]);
@@ -61,7 +60,6 @@ namespace UnitTestMatrixArithmetics
             Assert.AreEqual(expectedOutput3[1, 1], temp3[1, 1]);
             Assert.AreEqual(expectedOutput3[0, 1], temp3[0, 1]);
             Assert.AreEqual(expectedOutput3[1, 0], temp3[1, 0]);
-
         }
     }
 }

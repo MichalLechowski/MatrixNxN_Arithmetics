@@ -15,7 +15,8 @@ namespace Matrix
             int Dimension = 0;
             int[,] OutputTab = new int[2, 2];
 
-
+            Dimension = 0;
+            CurrentCell = 0;
             for (int i = 0; i <= (tab.GetLength(1) % 2 == 0 ? tab.GetLength(1) / 2 - 2 : (tab.GetLength(1) / 2) - 1); i++)
             {
                 CurrentCell = Dimension + 1;
@@ -33,7 +34,6 @@ namespace Matrix
 
 
             CurrentCell = 0;
-            Dimension = 0;
             for (int i = 0; i <= (tab.GetLength(1) % 2 == 0 ? tab.GetLength(1) / 2 - 2 : (tab.GetLength(1) / 2) - 1); i++)
             {
                 CurrentCell = Dimension + 1;
@@ -51,7 +51,6 @@ namespace Matrix
 
 
             CurrentCell = 0;
-            Dimension = tab.GetLength(1) - 1;
             for (int i = 0; i <= (tab.GetLength(1) % 2 == 0 ? tab.GetLength(1) / 2 - 2 : (tab.GetLength(1) / 2) - 1); i++)
             {
                 CurrentCell = Dimension - 1;
@@ -69,7 +68,6 @@ namespace Matrix
 
 
             CurrentCell = 0;
-            Dimension = tab.GetLength(1) - 1;
             for (int i = 0; i <= (tab.GetLength(1) % 2 == 0 ? tab.GetLength(1) / 2 - 2 : (tab.GetLength(1) / 2) - 1); i++)
             {
                 CurrentCell = Dimension - 1;
@@ -86,9 +84,6 @@ namespace Matrix
 
 
             return OutputTab;
-
         }
     }
-
 }
-
