@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Matrix
 {
-    public class MatrixAlgorithmOptimize
+    /// <summary>
+    /// 1 loop per 2 triangles thanks to transpose. Lots of additinal information required, tho. Too complicated
+    /// </summary>
+    public class MatrixAlgorithmPartialOptimization
     {
         public static int[,] SumTrianglesValues(int[,] tab)
         {

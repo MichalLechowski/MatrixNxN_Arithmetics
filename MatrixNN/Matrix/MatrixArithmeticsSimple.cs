@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Matrix
 {
-    public static class MatrixArithmetics
+    /// <summary>
+    /// A bad way to do it by calling 4 different methods, one for each triangle inside the matrix.
+    /// Lots of additional parameteres, lots of loops
+    /// </summary>
+    public static class MatrixArithmeticsSimple
     {
         public static int[,] Add(int[,] tab)
         {

@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MatrixAlgorithmFinalOptimization.cs" />
-    <Compile Include="MatrixAlgorithmOptimize.cs" />
-    <Compile Include="MatrixArithmetics.cs" />
+    <Compile Include="MatrixAlgorithmPartialOptimization.cs" />
+    <Compile Include="MatrixArithmeticsSimple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

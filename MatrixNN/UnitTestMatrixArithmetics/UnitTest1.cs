@@ -36,9 +36,20 @@ namespace UnitTestMatrixArithmetics
                 {2, 2, 3},
             };
 
-            int[,] expectedOutput1 = new int[,] { { 8, 15 }, { 15, 8 } };
-            int[,] expectedOutput2 = new int[,] { { 3, 6 }, { 6, 3 } };
-            int[,] expectedOutput3 = new int[,] { { 2, 3}, { 2, 1 } };
+            int[,] expectedOutput1 = new int[,] {
+                                                { 8, 15 },
+                                                { 15, 8 }
+                                                };
+
+            int[,] expectedOutput2 = new int[,] {
+                                                { 3, 6 },
+                                                { 6, 3 }
+                                                };
+
+            int[,] expectedOutput3 = new int[,] {
+                                                { 2, 3 },
+                                                { 2, 1 }
+                                                };
 
             //act
             int[,] temp1 = MatrixAlgorithmFinalOptimization.SumTrianglesValues(testTab1);
